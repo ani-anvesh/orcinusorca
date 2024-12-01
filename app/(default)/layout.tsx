@@ -5,14 +5,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import Footer from "@/components/ui/footer";
+import Footer from "@/components/ui/footer";
 import React from "react";
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DefaultLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     AOS.init({
       once: true,
@@ -26,7 +22,7 @@ export default function DefaultLayout({
     <>
       <main className="relative flex grow flex-col">{children}</main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
